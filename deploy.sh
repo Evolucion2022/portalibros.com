@@ -4,9 +4,9 @@
 # Called via webhook or manually to pull latest from GitHub
 # =============================================================
 
-REPO_DIR="/home/yzibhssy/libros-repo"
-DEPLOY_DIR="/home/yzibhssy/libros.javired.com"
-GITHUB_REPO="https://github.com/Evolucion2022/libros.javired.com.git"
+REPO_DIR="/home/yzibhssy/portalibros-repo"
+DEPLOY_DIR="/home/yzibhssy/portalibros.com"
+GITHUB_REPO="https://github.com/Evolucion2022/portalibros.com.git"
 LOG_FILE="$DEPLOY_DIR/deploy.log"
 
 echo "========================================" >> "$LOG_FILE"

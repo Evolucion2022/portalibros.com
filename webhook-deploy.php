@@ -20,11 +20,11 @@
 
 // ============ CONFIGURACIÓN ============
 $WEBHOOK_SECRET = 'libros-deploy-2026-secret';
-$GITHUB_REPO = 'Evolucion2022/libros.javired.com';
+$GITHUB_REPO = 'Evolucion2022/portalibros.com';
 $BRANCH = 'main';
-$DEPLOY_DIR = '/home/yzibhssy/libros.javired.com';
+$DEPLOY_DIR = '/home/yzibhssy/portalibros.com';
 $TEMP_DIR = '/home/yzibhssy/tmp/deploy-' . time();
-$LOG_FILE = '/home/yzibhssy/libros.javired.com/deploy.log';
+$LOG_FILE = '/home/yzibhssy/portalibros.com/deploy.log';
 
 // Archivos/carpetas a desplegar (origen => destino relativo al DEPLOY_DIR)
 $DEPLOY_PATHS = [

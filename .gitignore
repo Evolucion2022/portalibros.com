@@ -1,3 +1,7 @@
+# Backups / Dumps (NO subir)
+*.sql
+*.zip
+
 # WordPress Core (no subir al repo)
 /wp-admin/
 /wp-includes/

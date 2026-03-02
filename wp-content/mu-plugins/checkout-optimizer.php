@@ -134,10 +134,13 @@ add_filter('default_checkout_billing_country', function () {
 
 /* ──────────────────────────────────────────────
    3. SKIP CART — DIRECT TO CHECKOUT
+   DESHABILITADO: Estaba impidiendo agregar
+   múltiples productos al carrito. El Side Cart
+   Premium ahora maneja la experiencia post-ATC.
    ────────────────────────────────────────────── */
-add_filter('woocommerce_add_to_cart_redirect', function ($url) {
-    return wc_get_checkout_url();
-});
+// add_filter('woocommerce_add_to_cart_redirect', function ($url) {
+//     return wc_get_checkout_url();
+// });
 
 
 

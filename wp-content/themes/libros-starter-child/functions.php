@@ -285,8 +285,8 @@ add_filter('pre_option_woocommerce_cart_redirect_after_add', function () {
     return 'no';
 });
 
-// ── Fix: Allow multiple products in cart (override sold_individually) ──
-add_filter('woocommerce_is_sold_individually', '__return_false', 999);
+// ── sold_individually se gestiona en side-cart-config.php ──
+// Los ebooks digitales son qty=1, pero se permiten múltiples productos distintos.
 
 // ── Fix: Prevent server-level cache from stripping WC session cookies ──
 // This is critical on LiteSpeed/cPanel shared hosting

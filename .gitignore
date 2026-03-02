@@ -1,0 +1,48 @@
+# WordPress Core (no subir al repo)
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/license.txt
+/readme.html
+/xmlrpc.php
+
+# Configuración sensible
+wp-config.php
+wp-config-local.php
+.htaccess
+
+# Uploads (demasiado pesados)
+/wp-content/uploads/
+
+# Cache / Compilados
+/wp-content/cache/
+/wp-content/advanced-cache.php
+/wp-content/object-cache.php
+/wp-content/wp-cache-config.php
+/wp-content/upgrade/
+
+# Plugins de terceros (excepto side-cart-premium y los custom)
+/wp-content/plugins/woocommerce/
+/wp-content/plugins/wordpress-seo/
+/wp-content/plugins/akismet/
+/wp-content/plugins/jetpack/
+/wp-content/plugins/contact-form-7/
+/wp-content/plugins/elementor/
+/wp-content/plugins/hello.php
+
+# Dependencias
+node_modules/
+vendor/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

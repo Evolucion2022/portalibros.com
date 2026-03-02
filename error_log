@@ -1,0 +1,51 @@
+[13-Feb-2026 13:07:46 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[13-Feb-2026 13:07:48 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[13-Feb-2026 13:08:03 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[13-Feb-2026 16:38:43 UTC] PHP Fatal error:  Uncaught Error: Class "Automattic\WooCommerce\Admin\Features\Blueprint\Init" not found in /home/yzibhssy/libros.javired.com/wp-content/plugins/woocommerce/src/Admin/Features/Features.php:152
+Stack trace:
+#0 /home/yzibhssy/libros.javired.com/wp-includes/class-wp-hook.php(341): Automattic\WooCommerce\Admin\Features\Features::load_features('')
+#1 /home/yzibhssy/libros.javired.com/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#2 /home/yzibhssy/libros.javired.com/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#3 /home/yzibhssy/libros.javired.com/wp-settings.php(742): do_action('init')
+#4 /home/yzibhssy/libros.javired.com/wp-config.php(47): require_once('/home/yzibhssy/...')
+#5 /home/yzibhssy/libros.javired.com/wp-load.php(50): require_once('/home/yzibhssy/...')
+#6 /home/yzibhssy/libros.javired.com/wp-cron.php(46): require_once('/home/yzibhssy/...')
+#7 {main}
+  thrown in /home/yzibhssy/libros.javired.com/wp-content/plugins/woocommerce/src/Admin/Features/Features.php on line 152
+[13-Feb-2026 16:39:41 UTC] PHP Fatal error:  Uncaught Error: Class "Automattic\WooCommerce\Blocks\BlockTypes\OrderConfirmation\ShippingWrapper" not found in /home/yzibhssy/libros.javired.com/wp-content/plugins/woocommerce/src/Blocks/BlockTypesController.php:118
+Stack trace:
+#0 /home/yzibhssy/libros.javired.com/wp-includes/class-wp-hook.php(341): Automattic\WooCommerce\Blocks\BlockTypesController->register_blocks('')
+#1 /home/yzibhssy/libros.javired.com/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#2 /home/yzibhssy/libros.javired.com/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#3 /home/yzibhssy/libros.javired.com/wp-settings.php(742): do_action('init')
+#4 /home/yzibhssy/libros.javired.com/wp-config.php(47): require_once('/home/yzibhssy/...')
+#5 /home/yzibhssy/libros.javired.com/wp-load.php(50): require_once('/home/yzibhssy/...')
+#6 /home/yzibhssy/libros.javired.com/wp-blog-header.php(13): require_once('/home/yzibhssy/...')
+#7 /home/yzibhssy/libros.javired.com/index.php(17): require('/home/yzibhssy/...')
+#8 {main}
+  thrown in /home/yzibhssy/libros.javired.com/wp-content/plugins/woocommerce/src/Blocks/BlockTypesController.php on line 118
+[13-Feb-2026 16:41:06 UTC] PHP Warning:  Class "Automattic\WooCommerce\Internal\Admin\WcPayWelcomePage" not found in /home/yzibhssy/libros.javired.com/wp-content/plugins/woocommerce/src/Admin/Features/Features.php on line 375
+[13-Feb-2026 18:16:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_id() on string in /home/yzibhssy/libros.javired.com/wp-content/themes/libros-starter/landing-pages/desactiva-tu-ansiedad.php:14
+Stack trace:
+#0 /home/yzibhssy/libros.javired.com/wp-content/themes/libros-starter/woocommerce.php(24): include()
+#1 /home/yzibhssy/libros.javired.com/wp-includes/template-loader.php(125): include('/home/yzibhssy/...')
+#2 /home/yzibhssy/libros.javired.com/wp-blog-header.php(19): require_once('/home/yzibhssy/...')
+#3 /home/yzibhssy/libros.javired.com/index.php(17): require('/home/yzibhssy/...')
+#4 {main}
+  thrown in /home/yzibhssy/libros.javired.com/wp-content/themes/libros-starter/landing-pages/desactiva-tu-ansiedad.php on line 14
+[14-Feb-2026 09:31:47 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[15-Feb-2026 09:31:53 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[16-Feb-2026 09:33:34 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[17-Feb-2026 09:31:19 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[18-Feb-2026 09:33:30 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[19-Feb-2026 09:29:26 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[20-Feb-2026 09:30:02 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[21-Feb-2026 09:30:33 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[22-Feb-2026 09:28:00 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[23-Feb-2026 09:28:28 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[24-Feb-2026 09:33:10 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[25-Feb-2026 09:30:28 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[26-Feb-2026 09:29:37 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[27-Feb-2026 09:31:31 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[28-Feb-2026 09:27:34 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[01-Mar-2026 09:29:17 UTC] PHP Warning:  Version warning: Imagick was compiled against ImageMagick version 1692 but version 1693 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0

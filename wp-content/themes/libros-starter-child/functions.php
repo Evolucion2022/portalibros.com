@@ -288,33 +288,7 @@ add_filter('pre_option_woocommerce_cart_redirect_after_add', function () {
 // ── sold_individually se gestiona en side-cart-config.php ──
 // Los ebooks digitales son qty=1, pero se permiten múltiples productos distintos.
 
-// ── Fix: Prevent server-level cache from stripping WC session cookies ──
-// This is critical on LiteSpeed/cPanel shared hosting
-add_action('send_headers', function () {
-    // If user has WC session cookie, tell caches NOT to cache this response
-    foreach ($_COOKIE as $name => $val) {
-        if (strpos($name, 'wp_woocommerce_session_') === 0 || strpos($name, 'woocommerce_cart_hash') === 0) {
-            nocache_headers();
-            header('X-LiteSpeed-Cache-Control: no-cache');
-            return;
-        }
-    }
-
-    // Also exclude WC pages from server cache
-    if (function_exists('is_cart') && (is_cart() || is_checkout() || is_account_page())) {
-        nocache_headers();
-        header('X-LiteSpeed-Cache-Control: no-cache');
-    }
-}, 1);
-
-// Force WC to initialize customer session early for guest users
-add_action('woocommerce_init', function () {
-    if (is_admin())
-        return;
-    if (WC()->session && !WC()->session->has_session()) {
-        WC()->session->set_customer_session_cookie(true);
-    }
-});
+// ── Session/cache fix movido a mu-plugins/wc-session-fix.php ──
 
 
 /* ──────────────────────────────────────────────

@@ -25,7 +25,7 @@ if (!defined('ABSPATH'))
 add_action('admin_init', function () {
 
   // Evitar re-ejecuciÃ³n innecesaria
-  if (get_option('libros_sidecart_configured') === '6')
+  if (get_option('libros_sidecart_configured') === '7')
     return;
 
   if (!function_exists('xoo_wsc_helper'))
@@ -37,18 +37,18 @@ add_action('admin_init', function () {
   $general_overrides = array(
 
     // â”€â”€ Textos en espaÃ±ol â”€â”€
-    'sct-cart-heading' => 'ðŸ›’ Tu Carrito',
+    'sct-cart-heading' => 'Tu Carrito',
     'sct-ft-contbtn' => 'Seguir Comprando',
     'sct-ft-cartbtn' => '',              // Oculto â€” redirige directo a checkout
     'sct-ft-chkbtn' => 'Comprar Ahora',
-    'sct-empty' => 'Tu carrito estÃ¡ vacÃ­o',
-    'sct-shop-btn' => 'ðŸ“š Explorar Libros',
-    'sct-savings' => 'Â¡EstÃ¡s ahorrando en este pedido!',
+    'sct-empty' => 'Tu carrito esta vacio',
+    'sct-shop-btn' => 'Explorar Libros',
+    'sct-savings' => 'Estas ahorrando en este pedido!',
     'sct-subtotal' => 'Subtotal',
-    'sct-footer' => 'ðŸ”’ Pago seguro Â· Descarga inmediata',
+    'sct-footer' => 'Pago seguro - Descarga inmediata',
     'sct-delete' => 'Eliminar',
-    'sct-sp-txt' => 'ðŸ“– TambiÃ©n te puede gustar',
-    'sct-sl-txt' => 'ðŸ’¾ Guardados para despuÃ©s',
+    'sct-sp-txt' => 'Tambien te puede gustar',
+    'sct-sl-txt' => 'Guardados para despues',
 
     // â”€â”€ Main Behavior â”€â”€
     'm-auto-open' => 'yes',           // Abrir carrito al agregar producto
@@ -1148,7 +1148,7 @@ CSS;
 
 
   // Marcar como configurado (v2)
-  update_option('libros_sidecart_configured', '6');
+  update_option('libros_sidecart_configured', '7');
 });
 
 
@@ -1170,9 +1170,9 @@ add_action('xoo_wsc_before_footer', function () {
         background: #F0F2F1;
         border-top: 1px solid #E8F5E9;
     ">';
-  echo '<span>ðŸ”’ SSL Seguro</span>';
+  echo '<span>SSL Seguro</span>';
   echo '<span>âš¡ Descarga Inmediata</span>';
-  echo '<span>ðŸ›¡ï¸ GarantÃ­a 7 DÃ­as</span>';
+  echo '<span>Garantia 7 Dias</span>';
   echo '</div>';
 });
 
@@ -1181,7 +1181,7 @@ add_action('xoo_wsc_before_footer', function () {
    PERSONALIZAR NOTIFICACIÃ“N AL AGREGAR PRODUCTO
    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 add_filter('xoo_wsc_add_to_cart_notice', function ($notice, $product_name) {
-  return 'âœ… <strong>' . $product_name . '</strong> se agregÃ³ a tu carrito';
+  return '<strong>' . $product_name . '</strong> se agrego a tu carrito';
 }, 10, 2);
 
 

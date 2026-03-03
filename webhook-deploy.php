@@ -32,6 +32,7 @@ $DEPLOY_PATHS = [
     'wp-content/plugins' => 'wp-content/plugins',
     'wp-content/mu-plugins' => 'wp-content/mu-plugins',
     'wp-content/product-landing-pages' => 'wp-content/product-landing-pages',
+    'wp-content/uploads/book-covers' => 'wp-content/uploads/book-covers',
     '.htaccess' => '.htaccess',
 ];
 

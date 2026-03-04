@@ -1,0 +1,421 @@
+/* ============================================================
+   PRODUCT LANDING CSS: El Protocolo de la Calma
+   Scoped to: body.landing-page--protocolo-calma
+   Author: PortaLibros.com
+   ============================================================ */
+
+/* ────────────── CSS Custom Properties ────────────── */
+body.landing-page--protocolo-calma {
+    --lp-primary: #1B3A5C;
+    --lp-primary-dark: #0F2640;
+    --lp-primary-light: #2C5F8C;
+    --lp-primary-glow: rgba(27, 58, 92, 0.25);
+    --lp-accent: #C9A96E;
+    --lp-accent-dark: #B08D4F;
+    --lp-accent-light: #DBBF8A;
+    --lp-bg-dark: #0A1628;
+    --lp-bg-section: #F8F5F0;
+    --lp-bg-card: #FFFFFF;
+    --lp-text-dark: #1A2035;
+    --lp-text-body: #3A4255;
+    --lp-text-muted: #6B7585;
+    --lp-text-light: #F0F2F5;
+    --lp-gradient-hero: linear-gradient(135deg, #0A1628 0%, #122240 40%, #1B3A5C 100%);
+    --lp-gradient-cta: linear-gradient(135deg, #C9A96E 0%, #DBBF8A 100%);
+    --lp-gradient-cta-hover: linear-gradient(135deg, #B08D4F 0%, #C9A96E 100%);
+    --lp-gradient-accent: linear-gradient(135deg, #C9A96E 0%, #E8D4A8 100%);
+    --lp-shadow-sm: 0 2px 8px rgba(10, 22, 40, 0.08);
+    --lp-shadow-md: 0 4px 20px rgba(10, 22, 40, 0.12);
+    --lp-shadow-lg: 0 8px 40px rgba(10, 22, 40, 0.18);
+    --lp-shadow-glow: 0 0 30px var(--lp-primary-glow);
+    --lp-radius-sm: 8px;
+    --lp-radius-md: 12px;
+    --lp-radius-lg: 20px;
+    --lp-radius-xl: 28px;
+    --lp-font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --lp-font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --lp-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ────────────── Global Reset ────────────── */
+body.landing-page--protocolo-calma {
+    background: var(--lp-bg-section) !important;
+    font-family: var(--lp-font-body) !important;
+    color: var(--lp-text-body);
+    overflow-x: hidden;
+}
+
+/* ────────────── HERO SECTION ────────────── */
+body.landing-page--protocolo-calma .hero {
+    background: var(--lp-gradient-hero);
+    position: relative;
+    overflow: hidden;
+}
+
+body.landing-page--protocolo-calma .hero::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -15%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(27, 58, 92, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+body.landing-page--protocolo-calma .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(201, 169, 110, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+body.landing-page--protocolo-calma .hero__badge {
+    background: rgba(201, 169, 110, 0.15) !important;
+    border: 1px solid rgba(201, 169, 110, 0.35) !important;
+    color: var(--lp-accent-light) !important;
+}
+
+body.landing-page--protocolo-calma .hero__title {
+    color: var(--lp-text-light) !important;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.landing-page--protocolo-calma .hero__title em {
+    color: var(--lp-accent) !important;
+    font-style: italic;
+}
+
+body.landing-page--protocolo-calma .hero__subtitle {
+    color: rgba(240, 242, 245, 0.85) !important;
+}
+
+body.landing-page--protocolo-calma .hero__micro {
+    color: rgba(240, 242, 245, 0.5) !important;
+}
+
+/* CTA Buttons */
+body.landing-page--protocolo-calma .btn--primary {
+    background: var(--lp-gradient-cta) !important;
+    color: var(--lp-bg-dark) !important;
+    font-weight: 700 !important;
+    box-shadow: 0 6px 25px rgba(201, 169, 110, 0.4) !important;
+}
+
+body.landing-page--protocolo-calma .btn--primary:hover {
+    background: var(--lp-gradient-cta-hover) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 35px rgba(201, 169, 110, 0.5) !important;
+}
+
+body.landing-page--protocolo-calma .btn--secondary {
+    border-color: rgba(201, 169, 110, 0.4) !important;
+    color: var(--lp-accent-light) !important;
+}
+
+body.landing-page--protocolo-calma .btn--secondary:hover {
+    background: rgba(201, 169, 110, 0.1) !important;
+    border-color: var(--lp-accent) !important;
+    color: var(--lp-accent) !important;
+}
+
+/* Mockup float animation */
+body.landing-page--protocolo-calma .hero__mockup {
+    animation: lpc-float 5s ease-in-out infinite;
+    filter: drop-shadow(0 20px 40px rgba(10, 22, 40, 0.4));
+}
+
+@keyframes lpc-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+body.landing-page--protocolo-calma .hero__mockup:hover {
+    animation-play-state: paused;
+}
+
+/* ────────────── SECTION OVERRIDES ────────────── */
+body.landing-page--protocolo-calma .section--dark {
+    background: var(--lp-gradient-hero) !important;
+}
+
+body.landing-page--protocolo-calma .section--cream {
+    background: var(--lp-bg-section) !important;
+}
+
+body.landing-page--protocolo-calma .section__eyebrow {
+    color: var(--lp-accent) !important;
+    letter-spacing: 2px;
+}
+
+body.landing-page--protocolo-calma .section__title {
+    font-family: var(--lp-font-heading) !important;
+    color: var(--lp-text-dark) !important;
+}
+
+body.landing-page--protocolo-calma .section--dark .section__title {
+    color: var(--lp-text-light) !important;
+}
+
+/* ────────────── MIRROR LIST (Espejo) ────────────── */
+body.landing-page--protocolo-calma .mirror-list__item {
+    border-left-color: var(--lp-primary) !important;
+    background: rgba(27, 58, 92, 0.04) !important;
+}
+
+body.landing-page--protocolo-calma .mirror-list__item:hover {
+    background: rgba(27, 58, 92, 0.08) !important;
+    border-left-color: var(--lp-accent) !important;
+}
+
+/* ────────────── CARD ACCENT (Agitación) ────────────── */
+body.landing-page--protocolo-calma .card--accent {
+    border-left: 4px solid var(--lp-primary) !important;
+    background: var(--lp-bg-card) !important;
+    box-shadow: var(--lp-shadow-md) !important;
+}
+
+body.landing-page--protocolo-calma .card--accent strong {
+    color: var(--lp-primary-dark) !important;
+}
+
+/* ────────────── RENACE GRID (Método → 4 Fases) ────────────── */
+body.landing-page--protocolo-calma .renace-step__letter {
+    background: var(--lp-gradient-cta) !important;
+    color: var(--lp-bg-dark) !important;
+    font-family: var(--lp-font-heading) !important;
+    font-weight: 800 !important;
+    box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3) !important;
+}
+
+body.landing-page--protocolo-calma .renace-step__word {
+    color: var(--lp-primary-dark) !important;
+    font-family: var(--lp-font-heading) !important;
+}
+
+body.landing-page--protocolo-calma .renace-step:hover .renace-step__letter {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(201, 169, 110, 0.5) !important;
+}
+
+/* ────────────── CHAPTERS GRID ────────────── */
+body.landing-page--protocolo-calma .phase-divider__label {
+    color: var(--lp-primary) !important;
+    font-weight: 600 !important;
+}
+
+body.landing-page--protocolo-calma .phase-divider__line {
+    background: var(--lp-primary) !important;
+    opacity: 0.2;
+}
+
+body.landing-page--protocolo-calma .chapter-card__num {
+    background: var(--lp-gradient-cta) !important;
+    color: var(--lp-bg-dark) !important;
+    font-weight: 800 !important;
+    box-shadow: 0 3px 10px rgba(201, 169, 110, 0.3) !important;
+}
+
+body.landing-page--protocolo-calma .chapter-card__title {
+    color: var(--lp-text-dark) !important;
+    font-family: var(--lp-font-heading) !important;
+}
+
+body.landing-page--protocolo-calma .chapter-card:hover {
+    border-color: var(--lp-accent) !important;
+    box-shadow: var(--lp-shadow-md) !important;
+}
+
+body.landing-page--protocolo-calma .chapter-card:hover .chapter-card__num {
+    transform: scale(1.1);
+}
+
+/* ────────────── AUTHOR SECTION ────────────── */
+body.landing-page--protocolo-calma .author-section__img {
+    border-radius: var(--lp-radius-lg) !important;
+    box-shadow: var(--lp-shadow-lg) !important;
+    border: 3px solid rgba(201, 169, 110, 0.3);
+}
+
+body.landing-page--protocolo-calma .author-section .badge {
+    background: rgba(27, 58, 92, 0.08) !important;
+    color: var(--lp-primary) !important;
+    border: 1px solid rgba(27, 58, 92, 0.15) !important;
+}
+
+/* ────────────── TESTIMONIALS ────────────── */
+body.landing-page--protocolo-calma .testimonial-card {
+    border-left: 4px solid var(--lp-accent) !important;
+}
+
+body.landing-page--protocolo-calma .testimonial-card__stars {
+    color: var(--lp-accent) !important;
+}
+
+body.landing-page--protocolo-calma .testimonial-card:hover {
+    box-shadow: var(--lp-shadow-md), 0 0 0 1px rgba(201, 169, 110, 0.15) !important;
+}
+
+/* ────────────── BONUS CARDS ────────────── */
+body.landing-page--protocolo-calma .bonus-card__badge {
+    background: var(--lp-gradient-cta) !important;
+    color: var(--lp-bg-dark) !important;
+}
+
+body.landing-page--protocolo-calma .bonus-card__title {
+    color: var(--lp-primary-dark) !important;
+    font-family: var(--lp-font-heading) !important;
+}
+
+body.landing-page--protocolo-calma .bonus-card__value {
+    color: var(--lp-accent-dark) !important;
+}
+
+body.landing-page--protocolo-calma .bonus-card:hover {
+    border-color: var(--lp-accent) !important;
+    box-shadow: var(--lp-shadow-md) !important;
+}
+
+/* ────────────── VALUE STACK (Oferta) ────────────── */
+body.landing-page--protocolo-calma .value-stack {
+    border: 2px solid rgba(201, 169, 110, 0.3) !important;
+    background: rgba(10, 22, 40, 0.6) !important;
+    backdrop-filter: blur(10px);
+}
+
+body.landing-page--protocolo-calma .value-stack__check {
+    filter: none !important;
+}
+
+body.landing-page--protocolo-calma .value-stack__label {
+    color: rgba(240, 242, 245, 0.9) !important;
+}
+
+body.landing-page--protocolo-calma .value-stack__price {
+    color: rgba(240, 242, 245, 0.5) !important;
+    text-decoration: line-through !important;
+}
+
+body.landing-page--protocolo-calma .value-stack__original {
+    color: rgba(240, 242, 245, 0.4) !important;
+    text-decoration: line-through !important;
+    font-size: 1.3rem;
+}
+
+body.landing-page--protocolo-calma .value-stack__final {
+    color: var(--lp-accent) !important;
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+    text-shadow: 0 2px 10px rgba(201, 169, 110, 0.3);
+}
+
+body.landing-page--protocolo-calma .value-stack__total {
+    border-top: 2px solid rgba(201, 169, 110, 0.2) !important;
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+}
+
+/* ────────────── GUARANTEE ────────────── */
+body.landing-page--protocolo-calma .guarantee-seal {
+    border-color: var(--lp-primary) !important;
+    background: var(--lp-bg-card) !important;
+}
+
+body.landing-page--protocolo-calma .guarantee-seal__title {
+    color: var(--lp-primary) !important;
+    font-family: var(--lp-font-heading) !important;
+}
+
+/* ────────────── FAQ ────────────── */
+body.landing-page--protocolo-calma .faq-item summary {
+    color: var(--lp-text-dark) !important;
+    font-family: var(--lp-font-heading) !important;
+}
+
+body.landing-page--protocolo-calma .faq-item[open] summary {
+    color: var(--lp-primary) !important;
+}
+
+body.landing-page--protocolo-calma .faq-item summary::marker,
+body.landing-page--protocolo-calma .faq-item summary::-webkit-details-marker {
+    color: var(--lp-accent) !important;
+}
+
+/* ────────────── FOOTER ────────────── */
+body.landing-page--protocolo-calma .footer {
+    background: var(--lp-bg-dark) !important;
+}
+
+body.landing-page--protocolo-calma .footer a {
+    color: var(--lp-accent-light) !important;
+}
+
+body.landing-page--protocolo-calma .footer a:hover {
+    color: var(--lp-accent) !important;
+}
+
+/* ────────────── TEXT ACCENT CLASS ────────────── */
+body.landing-page--protocolo-calma .text-sage {
+    color: var(--lp-accent) !important;
+}
+
+/* ────────────── SCROLLBAR ────────────── */
+body.landing-page--protocolo-calma::-webkit-scrollbar {
+    width: 8px;
+}
+
+body.landing-page--protocolo-calma::-webkit-scrollbar-track {
+    background: var(--lp-bg-section);
+}
+
+body.landing-page--protocolo-calma::-webkit-scrollbar-thumb {
+    background: var(--lp-primary);
+    border-radius: 4px;
+}
+
+body.landing-page--protocolo-calma::-webkit-scrollbar-thumb:hover {
+    background: var(--lp-accent);
+}
+
+/* ────────────── ANIMATIONS ────────────── */
+@keyframes lpc-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
+body.landing-page--protocolo-calma .animate-breathe {
+    animation: lpc-pulse 3s ease-in-out infinite;
+}
+
+body.landing-page--protocolo-calma .animate-breathe:hover {
+    animation-play-state: paused;
+}
+
+/* ────────────── RESPONSIVE ────────────── */
+@media (max-width: 767px) {
+    body.landing-page--protocolo-calma .hero__title {
+        font-size: clamp(1.6rem, 6vw, 2.5rem) !important;
+    }
+
+    body.landing-page--protocolo-calma .section__title {
+        font-size: clamp(1.4rem, 5vw, 2rem) !important;
+    }
+
+    body.landing-page--protocolo-calma .value-stack__final {
+        font-size: 2.4rem !important;
+    }
+
+    body.landing-page--protocolo-calma .renace-grid {
+        gap: 16px !important;
+    }
+
+    body.landing-page--protocolo-calma .chapters-grid {
+        gap: 12px !important;
+    }
+}
